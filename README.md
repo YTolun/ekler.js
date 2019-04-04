@@ -33,7 +33,6 @@ return dog.iyelikEki('bizim'); // köpeğimiz
 Dökümantasyon gelinceye dek detaylı kullanım yörüngeleri için kodu incelemeniz gerekiyor.
 
 ## Yapılacaklar
-* Özellikle testlerin sınıflandırılması ve bazı kuralların uygulanması bakımından köklü değişiklikler olacağını tahmin ediyorum
 * Henüz ele alınmayan istisnaların ele alınması için çalışılması gerek
 * Kendi eklerinizi ve/veya kurallarınızı da tanıtmayı anlatan bir dökümantasyon yazılacak
 * npm paketi olarak sunulacak
