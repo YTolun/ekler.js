@@ -21,13 +21,34 @@ test('Son harfi sessiz harf ve son hecesi kalın yuvarlak olan bir kelimeye biri
   expect(isim.iyelikEki('benim')).toBe('horozum');
 });
 
-// Ünsüz Yumuşaması
 test('Son harfi sessiz harf ve son hecesi ince yuvarlak olan bir kelimeye birinci tekil şahıs eki "-m" gelirse ekin biçimciği "-üm" olur', () => {
   const isim = new Isim('hoparlör');
   expect(isim.iyelikEki('benim')).toBe('hoparlörüm');
 });
 
-test('Birinci tekil şahıs iyelik eki ünsüz yumuşamasına uyar', () => {
+// Ünsüz Yumuşaması
+test('Son harfi "k" olan bir kelimeye birinci tekil şahıs eki "-m" gelirse kelimenin sonundaki harf yumuşayarak "ğ" olur', () => {
   const isim = new Isim('köpek');
   expect(isim.iyelikEki('benim')).toBe('köpeğim');
+});
+
+test('Son harfi "ç" olan bir kelimeye birinci tekil şahıs eki "-m" gelirse kelimenin sonundaki harf yumuşayarak "c" olur', () => {
+  const isim = new Isim('haraç');
+  expect(isim.iyelikEki('benim')).toBe('haracım');
+});
+
+test('Son harfi "p" olan bir kelimeye birinci tekil şahıs eki "-m" gelirse kelimenin sonundaki harf yumuşayarak "b" olur', () => {
+  const isim = new Isim('kitap');
+  expect(isim.iyelikEki('benim')).toBe('kitabım');
+});
+
+test('Son harfi "t" olan bir kelimeye birinci tekil şahıs eki "-m" gelirse kelimenin sonundaki harf yumuşayarak "d" olur', () => {
+  const isim = new Isim('murat');
+  expect(isim.iyelikEki('benim')).toBe('muradım');
+});
+
+// Kaynaştırma
+test('Su kelimesine birinci tekil şahıs iyelik eki "-m" gelirse ekin biçimciği "-yum" olur', () => {
+  const isim = new Isim('su');
+  expect(isim.iyelikEki('benim')).toBe('suyum');
 });

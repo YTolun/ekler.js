@@ -21,13 +21,7 @@ test('Son harfi sessiz harf ve son hecesi kalın yuvarlak olan bir kelimeye üç
   expect(isim.iyelikEki('onların')).toBe('horozları');
 });
 
-// Ünsüz Yumuşaması
 test('Son harfi sessiz harf ve son hecesi ince yuvarlak olan bir kelimeye üçüncü çoğul şahıs eki "-ları" gelirse ekin biçimciği "-ünüz" olur', () => {
   const isim = new Isim('hoparlör');
   expect(isim.iyelikEki('onların')).toBe('hoparlörleri');
-});
-
-test('üçüncü çoğul şahıs iyelik eki ünsüz yumuşamasına uyar', () => {
-  const isim = new Isim('köpek');
-  expect(isim.iyelikEki('onların')).toBe('köpekleri');
 });

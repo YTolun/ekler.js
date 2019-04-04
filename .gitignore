@@ -62,3 +62,6 @@ typings/
 
 # .editorconfig file
 .editorconfig
+
+# To do list
+todo.md

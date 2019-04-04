@@ -1,4 +1,4 @@
-const Isim = require('../../isim');
+const Isim = require('../isim');
 
 // Özel İsimler
 test('Özel isimlere gel gelen hal ekleri kesme işareti ile ayrılır', () => {

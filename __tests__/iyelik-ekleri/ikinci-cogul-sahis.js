@@ -21,13 +21,34 @@ test('Son harfi sessiz harf ve son hecesi kalın yuvarlak olan bir kelimeye ikin
   expect(isim.iyelikEki('sizin')).toBe('horozunuz');
 });
 
-// Ünsüz Yumuşaması
-test('Son harfi sessiz harf ve son hecesi ince yuvarlak olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse ekin biçimciği "-ünüz" olur', () => {
+test('Son harfi sessiz harf ve son hecesi ince yuvarlak olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse ekin biçimciği "-ümüz" olur', () => {
   const isim = new Isim('hoparlör');
   expect(isim.iyelikEki('sizin')).toBe('hoparlörünüz');
 });
 
-test('ikinci çoğul şahıs iyelik eki ünsüz yumuşamasına uyar', () => {
+// Ünsüz Yumuşaması
+test('Son harfi "k" olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse kelimenin sonundaki harf yumuşayarak "ğ" olur', () => {
   const isim = new Isim('köpek');
   expect(isim.iyelikEki('sizin')).toBe('köpeğiniz');
+});
+
+test('Son harfi "ç" olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse kelimenin sonundaki harf yumuşayarak "c" olur', () => {
+  const isim = new Isim('haraç');
+  expect(isim.iyelikEki('sizin')).toBe('haracınız');
+});
+
+test('Son harfi "p" olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse kelimenin sonundaki harf yumuşayarak "b" olur', () => {
+  const isim = new Isim('kitap');
+  expect(isim.iyelikEki('sizin')).toBe('kitabınız');
+});
+
+test('Son harfi "t" olan bir kelimeye ikinci çoğul şahıs eki "-nız" gelirse kelimenin sonundaki harf yumuşayarak "d" olur', () => {
+  const isim = new Isim('murat');
+  expect(isim.iyelikEki('sizin')).toBe('muradınız');
+});
+
+// Kaynaştırma
+test('Su kelimesine ikinci çoğul şahıs iyelik eki "-nız" gelirse ekin biçimciği "-yunuz" olur', () => {
+  const isim = new Isim('su');
+  expect(isim.iyelikEki('sizin')).toBe('suyunuz');
 });
